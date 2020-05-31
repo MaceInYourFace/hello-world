@@ -6,12 +6,19 @@ class AnimalWelfareCenter:
         self.dogs = dogs
         self.cats = cats
 
-    def feed_all_animals(self):
+    def feed_all_animals(self, amount_of_times):
         for dog in self.dogs:
-            dog.feed(2)
+            dog.feed(2*amount_of_times)
 
         for cat in self.cats:
-            cat.feed(1)
+            cat.feed(1*amount_of_times)
+
+    def hydrate_all_animals(self, amount_of_times):
+        for dog in self.dogs:
+            dog.hydrate(2*amount_of_times)
+
+        for cat in self.cats:
+            cat.hydrate(1*amount_of_times)
 
     def excercise_all_animals(self, time):
         for dog in self.dogs:

@@ -8,35 +8,20 @@ class Main:
         self.animal_welfare_center = AnimalWelfareCenter([], [])
 
     def run(self):
-        cat1 = Cat(1, 3)
-        cat2 = Cat(2, 3)
-        cat3 = Cat(3, 3)
-        cat4 = Cat(5, 5)
-        cat5 = Cat(2, 1)
-        cat6 = Cat(6, 2)
+        cats = [Cat(1, 3), Cat(2, 3), Cat(3, 3), Cat(5, 5), Cat(2, 1), Cat(6, 2), Cat(7, 4)]
+        dogs = [Dog(1, 3), Dog(2, 3), Dog(3, 3), Dog(5, 5), Dog(2, 1), Dog(5, 2), Dog(3, 4)]
 
-        dog1 = Dog(1, 3)
-        dog2 = Dog(2, 3)
-        dog3 = Dog(3, 3)
-        dog4 = Dog(5, 5)
-        dog5 = Dog(2, 1)
-        dog6 = Dog(5, 2)
+        for dog in dogs:
+            self.animal_welfare_center.add_animal(dog)
 
-        self.animal_welfare_center.add_animal(dog1)
-        self.animal_welfare_center.add_animal(dog2)
-        self.animal_welfare_center.add_animal(dog3)
-        self.animal_welfare_center.add_animal(dog4)
-        self.animal_welfare_center.add_animal(dog5)
-        self.animal_welfare_center.add_animal(dog6)
+        for cat in cats:
+            self.animal_welfare_center.add_animal(cat)
+            
+        self.animal_welfare_center.feed_all_animals(4)
+        self.animal_welfare_center.hydrate_all_animals(4)
 
-        self.animal_welfare_center.add_animal(cat1)
-        self.animal_welfare_center.add_animal(cat2)
-        self.animal_welfare_center.add_animal(cat3)
-        self.animal_welfare_center.add_animal(cat4)
-        self.animal_welfare_center.add_animal(cat5)
-        self.animal_welfare_center.add_animal(cat6)
 
-        self.animal_welfare_center.excercise_all_animals(6)
+        self.animal_welfare_center.excercise_all_animals(8)
         self.animal_welfare_center.check_for_dead_animals()
         self.output_food_levels()
         self.output_liquid_levels()

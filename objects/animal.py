@@ -8,7 +8,7 @@ class Animal:
     def feed(self, amount_of_food):
         self.food_level = self.food_level + amount_of_food
 
-    def water(self, amount_liquid):
+    def hydrate(self, amount_liquid):
         self.liquid_level = self.liquid_level + amount_liquid
 
     def check_food_and_liquid_levels(self):
